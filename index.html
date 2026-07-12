@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>To_Do List</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="app hidden">
+      <div class="left-sidebar">
+        <div>
+          <img class="logo" alt="logo" src="assets/images/logo.png" />
+          <img alt="toggle side bar" src="assets/icons/panel-left-icon.svg" />
+        </div>
+        <div class="add-project add-project-btn"><span>+</span>New Project</div>
+        <div class="task-section">
+          <div class="today">
+            <div>
+              <img alt="icon" src="assets/icons/today-icon.svg" />
+              Today
+            </div>
+            <span class="nbr-of-task">0</span>
+          </div>
+          <div class="futur">
+            <div>
+              <img alt="icon" src="assets/icons/shorly-icon.svg" />
+              Upcoming
+            </div>
+            <span class="nbr-of-task">0</span>
+          </div>
+        </div>
+        <div class="project-section">
+          <div>PROJECTS <span class="add-project-btn">+</span></div>
+        </div>
+
+        <div class="user-section">
+          <div>
+            <img
+              class="user-img-profil"
+              alt="profile-image"
+              src="assets/icons/black-person.svg"
+            />
+            <div>
+              <p class="user-name"></p>
+              <p class="user-email"></p>
+            </div>
+          </div>
+          <span>⌄</span>
+        </div>
+      </div>
+      <div class="vuePart">
+        <div class="header">
+          <div>
+            <img alt="icon" src="assets/icons/black-rocket.svg" />
+            <span class="poject-select">Project Name</span><span>⋮</span>
+          </div>
+          <div>
+            <img alt="icon" src="assets/icons/black-search.svg" />
+            <img alt="icon" src="assets/icons/black-filter.svg" />
+            <span>…</span>
+          </div>
+          <button type="submit" class="add-todo">+ add a todo</button>
+          <div>
+            <span>Todos</span><span>Overview</span><span>File</span
+            ><span>Parameter</span>
+          </div>
+        </div>
+        <div class="content"></div>
+        <div class="right-bar hidden">
+          <span>✕</span>
+          <div>
+            <p class="task-title"></p>
+            <div>
+              <img alt="icon" src="assets/icons/red-flag.svg" />
+              <span class="task-priority"></span>
+            </div>
+            <div>
+              <img alt="icon" src="assets/icons/black-agenda.svg" />
+              <span class="task-deadline"></span>
+            </div>
+            <p class="task-description"></p>
+          </div>
+          <hr />
+          <div>
+            <span>Notes</span>
+            <div class="task-notes" contenteditable="true"></div>
+          </div>
+          <hr />
+          <div>
+            <img class="delete-task" alt="icon" src="assets/icons/delete.svg" />
+            <span>Delete Todo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-modal-overlay hidden">
+      <div class="project-modal">
+        <div class="project-modal-header">
+          <div class="project-modal-title">
+            <img alt="Add a project" src="assets/images/logo.png" />
+            <div>
+              <h2>Add Project</h2>
+              <p>Create a new task list</p>
+            </div>
+          </div>
+          <button type="button" class="project-modal-close">✕</button>
+        </div>
+        <form class="project-modal-form">
+          <label>
+            Project name
+            <input
+              type="text"
+              class="project-name-form"
+              placeholder="Project name"
+            />
+          </label>
+          <label>
+            Description
+            <textarea
+              class="project-description-form"
+              placeholder="Project description"
+              rows="4"
+            ></textarea>
+          </label>
+          <div class="project-modal-row">
+            <label>
+              deadline
+              <input type="date" class="project-date-form" />
+            </label>
+            <label>
+              Priority
+              <select class="project-priority-form">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Choose icon
+            <div class="icon-set">
+              <img alt="icon" src="assets/icons/black-web.svg" />
+              <img alt="icon" src="assets/icons/black-rocket.svg" />
+              <img alt="" src="assets/icons/black-person.svg" />
+              <img alt="" src="assets/icons/black-code.svg" />
+            </div>
+          </label>
+          <div class="project-modal-actions">
+            <button type="button" class="project-modal-cancel">Cancel</button>
+            <button type="submit" class="project-modal-submit">
+              Add project
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="todo-modal-overlay hidden" aria-hidden="true">
+      <div
+        class="todo-modal"
+        aria-labelledby="todo-modal-title"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div class="todo-modal-header">
+          <h2 id="todo-modal-title">New Task</h2>
+          <button type="submit" class="todo-modal-close" aria-label="Close">
+            ✕
+          </button>
+        </div>
+        <form class="todo-modal-form">
+          <label class="field">
+            <span class="field-label">Task Title <sup>*</sup></span>
+            <input
+              type="text"
+              class="field-input todo-title"
+              placeholder="Ex: Create the homepage mockup"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Description</span>
+            <textarea
+              class="field-textarea todo-description"
+              placeholder="Add a detailed task description..."
+              rows="4"
+            ></textarea>
+          </label>
+
+          <div class="todo-grid">
+            <label class="field">
+              <span class="field-label">Due Date</span>
+              <input type="date" class="field-input todo-deadline" />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Priority</span>
+              <select class="field-input todo-priority">
+                <option selected>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field-label">Notes (optional)</span>
+            <textarea
+              class="field-textarea todo-notes"
+              placeholder="Additional notes..."
+              rows="3"
+            ></textarea>
+          </label>
+
+          <div class="todo-modal-actions">
+            <button type="button" class="btn btn-ghost">Cancel</button>
+            <button type="submit" class="btn btn-primary">Create Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="login-modal-overlay" aria-hidden="true">
+      <div
+        class="login-modal"
+        aria-labelledby="login-modal-title"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div class="login-modal-header">
+          <img class="logo" alt="logo" src="assets/images/logo.png" />
+          <button type="submit" class="login-modal-close" aria-label="Close">
+            ✕
+          </button>
+        </div>
+        <form class="login-modal-form">
+          <label class="field">
+            <span class="field-label">First name</span>
+            <input
+              type="text"
+              class="login-user-name"
+              name="name"
+              placeholder="First name"
+              required
+            />
+          </label>
+          <label class="field">
+            <span class="field-label">Last name</span>
+            <input
+              type="text"
+              class="login-user-surname"
+              name="surname"
+              placeholder="Last name"
+              required
+            />
+          </label>
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input
+              type="email"
+              class="login-user-email"
+              name="email"
+              placeholder="email@example.com"
+              required
+            />
+          </label>
+          <div class="login-modal-actions">
+            <button type="button" class="btn btn-ghost login-cancel">
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary login-button">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
