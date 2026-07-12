@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>To_Do List</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-C-sM-axq.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-xNR3o6iz.css">
+  </head>
+  <body>
+    <div class="app hidden">
+      <div class="left-sidebar">
+        <div>
+          <img class="logo" alt="logo" src="/assets/logo-DLnEGe-k.png" />
+          <img alt="toggle side bar" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cpath%20fill='none'%20stroke='%23fff'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'%20d='M9%203.5v17M3%209.4c0-2.24%200-3.36.436-4.216a4%204%200%200%201%201.748-1.748C6.04%203%207.16%203%209.4%203h5.2c2.24%200%203.36%200%204.216.436a4%204%200%200%201%201.748%201.748C21%206.04%2021%207.16%2021%209.4v5.2c0%202.24%200%203.36-.436%204.216a4%204%200%200%201-1.748%201.748C17.96%2021%2016.84%2021%2014.6%2021H9.4c-2.24%200-3.36%200-4.216-.436a4%204%200%200%201-1.748-1.748C3%2017.96%203%2016.84%203%2014.6z'%20/%3e%3c/svg%3e" />
+        </div>
+        <div class="add-project add-project-btn"><span>+</span>New Project</div>
+        <div class="task-section">
+          <div class="today">
+            <div>
+              <img alt="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cg%20fill='none'%3e%3cpath%20d='m12.593%2023.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02%200%200%200-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z'%20/%3e%3cpath%20fill='%23fff'%20d='M12%2019a1%201%200%200%201%201%201v1a1%201%200%201%201-2%200v-1a1%201%200%200%201%201-1m6.364-2.05l.707.707a1%201%200%200%201-1.414%201.414l-.707-.707a1%201%200%200%201%201.414-1.414m-12.728%200a1%201%200%200%201%201.497%201.32l-.083.094l-.707.707a1%201%200%200%201-1.497-1.32l.083-.094zM12%206a6%206%200%201%201%200%2012a6%206%200%200%201%200-12m0%202a4%204%200%201%200%200%208a4%204%200%200%200%200-8m-8%203a1%201%200%200%201%20.117%201.993L4%2013H3a1%201%200%200%201-.117-1.993L3%2011zm17%200a1%201%200%201%201%200%202h-1a1%201%200%201%201%200-2zM4.929%204.929a1%201%200%200%201%201.32-.083l.094.083l.707.707a1%201%200%200%201-1.32%201.497l-.094-.083l-.707-.707a1%201%200%200%201%200-1.414m14.142%200a1%201%200%200%201%200%201.414l-.707.707a1%201%200%201%201-1.414-1.414l.707-.707a1%201%200%200%201%201.414%200M12%202a1%201%200%200%201%201%201v1a1%201%200%201%201-2%200V3a1%201%200%200%201%201-1'%20/%3e%3c/g%3e%3c/svg%3e" />
+              Today
+            </div>
+            <span class="nbr-of-task">0</span>
+          </div>
+          <div class="futur">
+            <div>
+              <img alt="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cpath%20fill='%23fff'%20d='M5%2022q-.825%200-1.412-.587T3%2020V6q0-.825.588-1.412T5%204h1V2h2v2h8V2h2v2h1q.825%200%201.413.588T21%206v14q0%20.825-.587%201.413T19%2022zm0-2h14V10H5zM5%208h14V6H5zm0%200V6z'%20/%3e%3c/svg%3e" />
+              Upcoming
+            </div>
+            <span class="nbr-of-task">0</span>
+          </div>
+        </div>
+        <div class="project-section">
+          <div>PROJECTS <span class="add-project-btn">+</span></div>
+        </div>
+
+        <div class="user-section">
+          <div>
+            <img
+              class="user-img-profil"
+              alt="profile-image"
+              src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cpath%20fill='%23000'%20d='M9.175%2010.825Q8%209.65%208%208t1.175-2.825T12%204t2.825%201.175T16%208t-1.175%202.825T12%2012t-2.825-1.175M4%2018v-.8q0-.85.438-1.562T5.6%2014.55q1.55-.775%203.15-1.162T12%2013t3.25.388t3.15%201.162q.725.375%201.163%201.088T20%2017.2v.8q0%20.825-.587%201.413T18%2020H6q-.825%200-1.412-.587T4%2018m2%200h12v-.8q0-.275-.137-.5t-.363-.35q-1.35-.675-2.725-1.012T12%2015t-2.775.338T6.5%2016.35q-.225.125-.363.35T6%2017.2zm7.413-8.587Q14%208.825%2014%208t-.587-1.412T12%206t-1.412.588T10%208t.588%201.413T12%2010t1.413-.587M12%2018'%20/%3e%3c/svg%3e"
+            />
+            <div>
+              <p class="user-name"></p>
+              <p class="user-email"></p>
+            </div>
+          </div>
+          <span>⌄</span>
+        </div>
+      </div>
+      <div class="vuePart">
+        <div class="header">
+          <div>
+            <img alt="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cg%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%3e%3cpath%20d='M4%2013a8%208%200%200%201%207%207a6%206%200%200%200%203-5a9%209%200%200%200%206-8a3%203%200%200%200-3-3a9%209%200%200%200-8%206a6%206%200%200%200-5%203'%20/%3e%3cpath%20d='M7%2014a6%206%200%200%200-3%206a6%206%200%200%200%206-3m4-8a1%201%200%201%200%202%200a1%201%200%201%200-2%200'%20/%3e%3c/g%3e%3c/svg%3e" />
+            <span class="poject-select">Project Name</span><span>⋮</span>
+          </div>
+          <div>
+            <img alt="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cpath%20fill='%23000'%20d='M15.5%2014h-.79l-.28-.27A6.47%206.47%200%200%200%2016%209.5A6.5%206.5%200%201%200%209.5%2016c1.61%200%203.09-.59%204.23-1.57l.27.28v.79l5%204.99L20.49%2019zm-6%200C7.01%2014%205%2011.99%205%209.5S7.01%205%209.5%205S14%207.01%2014%209.5S11.99%2014%209.5%2014'%20/%3e%3c/svg%3e" />
+            <img alt="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cpath%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='1.5'%20d='M4%203h16a1%201%200%200%201%201%201v1.586a1%201%200%200%201-.293.707l-6.414%206.414a1%201%200%200%200-.293.707v6.305a1%201%200%200%201-1.243.97l-2-.5a1%201%200%200%201-.757-.97v-5.805a1%201%200%200%200-.293-.707L3.293%206.293A1%201%200%200%201%203%205.586V4a1%201%200%200%201%201-1'%20/%3e%3c/svg%3e" />
+            <span>…</span>
+          </div>
+          <button type="submit" class="add-todo">+ add a todo</button>
+          <div>
+            <span>Todos</span><span>Overview</span><span>File</span
+            ><span>Parameter</span>
+          </div>
+        </div>
+        <div class="content"></div>
+        <div class="right-bar hidden">
+          <span>✕</span>
+          <div>
+            <p class="task-title"></p>
+            <div>
+              <img alt="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cpath%20fill='%23bd1515'%20d='M4%205a1%201%200%200%201%20.3-.714a6%206%200%200%201%208.213-.176l.351.328a4%204%200%200%200%205.272%200l.249-.227c.61-.483%201.527-.097%201.61.676L20%205v9a1%201%200%200%201-.3.714a6%206%200%200%201-8.213.176l-.351-.328A4%204%200%200%200%206%2014.448V21a1%201%200%200%201-1.993.117L4%2021z'%20/%3e%3c/svg%3e" />
+              <span class="task-priority"></span>
+            </div>
+            <div>
+              <img alt="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cg%20fill='none'%3e%3crect%20width='18'%20height='15'%20x='3'%20y='6'%20stroke='%23000'%20stroke-width='2'%20rx='2'%20/%3e%3cpath%20fill='%23000'%20d='M3%2010c0-1.886%200-2.828.586-3.414S5.114%206%207%206h10c1.886%200%202.828%200%203.414.586S21%208.114%2021%2010z'%20/%3e%3cpath%20stroke='%23000'%20stroke-linecap='round'%20stroke-width='2'%20d='M7%203v3m10-3v3'%20/%3e%3c/g%3e%3c/svg%3e" />
+              <span class="task-deadline"></span>
+            </div>
+            <p class="task-description"></p>
+          </div>
+          <hr />
+          <div>
+            <span>Notes</span>
+            <div class="task-notes" contenteditable="true"></div>
+          </div>
+          <hr />
+          <div>
+            <img class="delete-task" alt="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cpath%20fill='%23e30101'%20d='M7%2021q-.825%200-1.412-.587T5%2019V6H4V4h5V3h6v1h5v2h-1v13q0%20.825-.587%201.413T17%2021zM17%206H7v13h10zM9%2017h2V8H9zm4%200h2V8h-2zM7%206v13z'%20/%3e%3c/svg%3e" />
+            <span>Delete Todo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-modal-overlay hidden">
+      <div class="project-modal">
+        <div class="project-modal-header">
+          <div class="project-modal-title">
+            <img alt="Add a project" src="/assets/logo-DLnEGe-k.png" />
+            <div>
+              <h2>Add Project</h2>
+              <p>Create a new task list</p>
+            </div>
+          </div>
+          <button type="button" class="project-modal-close">✕</button>
+        </div>
+        <form class="project-modal-form">
+          <label>
+            Project name
+            <input
+              type="text"
+              class="project-name-form"
+              placeholder="Project name"
+            />
+          </label>
+          <label>
+            Description
+            <textarea
+              class="project-description-form"
+              placeholder="Project description"
+              rows="4"
+            ></textarea>
+          </label>
+          <div class="project-modal-row">
+            <label>
+              deadline
+              <input type="date" class="project-date-form" />
+            </label>
+            <label>
+              Priority
+              <select class="project-priority-form">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Choose icon
+            <div class="icon-set">
+              <img alt="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cpath%20fill='%23000'%20d='M16.36%2014c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26%201.31.26%202s-.1%201.36-.26%202m-5.15%205.56c.6-1.11%201.06-2.31%201.38-3.56h2.95a8.03%208.03%200%200%201-4.33%203.56M14.34%2014H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16%201.32.16%202s-.07%201.34-.16%202M12%2019.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41%201.43-1.08%202.76-1.91%203.96M8%208H5.08A7.92%207.92%200%200%201%209.4%204.44C8.8%205.55%208.35%206.75%208%208m-2.92%208H8c.35%201.25.8%202.45%201.4%203.56A8%208%200%200%201%205.08%2016m-.82-2C4.1%2013.36%204%2012.69%204%2012s.1-1.36.26-2h3.38c-.08.66-.14%201.32-.14%202s.06%201.34.14%202M12%204.03c.83%201.2%201.5%202.54%201.91%203.97h-3.82c.41-1.43%201.08-2.77%201.91-3.97M18.92%208h-2.95a15.7%2015.7%200%200%200-1.38-3.56c1.84.63%203.37%201.9%204.33%203.56M12%202C6.47%202%202%206.5%202%2012a10%2010%200%200%200%2010%2010a10%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202'%20/%3e%3c/svg%3e" />
+              <img alt="icon" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cg%20fill='none'%20stroke='%23000'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='2'%3e%3cpath%20d='M4%2013a8%208%200%200%201%207%207a6%206%200%200%200%203-5a9%209%200%200%200%206-8a3%203%200%200%200-3-3a9%209%200%200%200-8%206a6%206%200%200%200-5%203'%20/%3e%3cpath%20d='M7%2014a6%206%200%200%200-3%206a6%206%200%200%200%206-3m4-8a1%201%200%201%200%202%200a1%201%200%201%200-2%200'%20/%3e%3c/g%3e%3c/svg%3e" />
+              <img alt="" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cpath%20fill='%23000'%20d='M9.175%2010.825Q8%209.65%208%208t1.175-2.825T12%204t2.825%201.175T16%208t-1.175%202.825T12%2012t-2.825-1.175M4%2018v-.8q0-.85.438-1.562T5.6%2014.55q1.55-.775%203.15-1.162T12%2013t3.25.388t3.15%201.162q.725.375%201.163%201.088T20%2017.2v.8q0%20.825-.587%201.413T18%2020H6q-.825%200-1.412-.587T4%2018m2%200h12v-.8q0-.275-.137-.5t-.363-.35q-1.35-.675-2.725-1.012T12%2015t-2.775.338T6.5%2016.35q-.225.125-.363.35T6%2017.2zm7.413-8.587Q14%208.825%2014%208t-.587-1.412T12%206t-1.412.588T10%208t.588%201.413T12%2010t1.413-.587M12%2018'%20/%3e%3c/svg%3e" />
+              <img alt="" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M0%200h24v24H0z'%20fill='none'%20/%3e%3cpath%20fill='%23000'%20d='m12.89%203l1.96.4L11.11%2021l-1.96-.4zm6.7%209L16%208.41V5.58L22.42%2012L16%2018.41v-2.83zM1.58%2012L8%205.58v2.83L4.41%2012L8%2015.58v2.83z'%20/%3e%3c/svg%3e" />
+            </div>
+          </label>
+          <div class="project-modal-actions">
+            <button type="button" class="project-modal-cancel">Cancel</button>
+            <button type="submit" class="project-modal-submit">
+              Add project
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="todo-modal-overlay hidden" aria-hidden="true">
+      <div
+        class="todo-modal"
+        aria-labelledby="todo-modal-title"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div class="todo-modal-header">
+          <h2 id="todo-modal-title">New Task</h2>
+          <button type="submit" class="todo-modal-close" aria-label="Close">
+            ✕
+          </button>
+        </div>
+        <form class="todo-modal-form">
+          <label class="field">
+            <span class="field-label">Task Title <sup>*</sup></span>
+            <input
+              type="text"
+              class="field-input todo-title"
+              placeholder="Ex: Create the homepage mockup"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Description</span>
+            <textarea
+              class="field-textarea todo-description"
+              placeholder="Add a detailed task description..."
+              rows="4"
+            ></textarea>
+          </label>
+
+          <div class="todo-grid">
+            <label class="field">
+              <span class="field-label">Due Date</span>
+              <input type="date" class="field-input todo-deadline" />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Priority</span>
+              <select class="field-input todo-priority">
+                <option selected>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field-label">Notes (optional)</span>
+            <textarea
+              class="field-textarea todo-notes"
+              placeholder="Additional notes..."
+              rows="3"
+            ></textarea>
+          </label>
+
+          <div class="todo-modal-actions">
+            <button type="button" class="btn btn-ghost">Cancel</button>
+            <button type="submit" class="btn btn-primary">Create Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="login-modal-overlay" aria-hidden="true">
+      <div
+        class="login-modal"
+        aria-labelledby="login-modal-title"
+        aria-modal="true"
+        role="dialog"
+      >
+        <div class="login-modal-header">
+          <img class="logo" alt="logo" src="/assets/logo-DLnEGe-k.png" />
+          <button type="submit" class="login-modal-close" aria-label="Close">
+            ✕
+          </button>
+        </div>
+        <form class="login-modal-form">
+          <label class="field">
+            <span class="field-label">First name</span>
+            <input
+              type="text"
+              class="login-user-name"
+              name="name"
+              placeholder="First name"
+              required
+            />
+          </label>
+          <label class="field">
+            <span class="field-label">Last name</span>
+            <input
+              type="text"
+              class="login-user-surname"
+              name="surname"
+              placeholder="Last name"
+              required
+            />
+          </label>
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input
+              type="email"
+              class="login-user-email"
+              name="email"
+              placeholder="email@example.com"
+              required
+            />
+          </label>
+          <div class="login-modal-actions">
+            <button type="button" class="btn btn-ghost login-cancel">
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary login-button">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
